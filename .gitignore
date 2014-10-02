@@ -1,5 +1,14 @@
 *.class
 
+# Play-Framework
+logs
+project/project
+project/target
+target
+tmp
+dist
+.cache
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
