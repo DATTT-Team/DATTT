@@ -15,7 +15,6 @@ DATTT provides
 - simple rights management and more...
 
 And because it`s awesome:
-
 **you can share your dattts with others!**
 > Do All The Things Together
 
