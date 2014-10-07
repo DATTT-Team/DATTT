@@ -1,13 +1,13 @@
 DATTT
 ======
 
-A small do-to lists and notice manager which provides you to share your task and work together.
+A small to-do lists and notice manager which provides you to share your task and work together.
 
 What can you do with DATTT?
 ----------------------------
 
 DATTT provides
-- easy to use do-to lists
+- easy to use to-do lists
 - simple notices
 - reminders for your tasks
 - export to your google calendar
