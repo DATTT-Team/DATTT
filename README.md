@@ -1,7 +1,7 @@
 DATTT
 ======
 
-A small to-do lists and notice manager which provides you to share your task and work together.
+A small to-do lists and notice manager which provides you to share your tasks and work together.
 
 What can you do with DATTT?
 ----------------------------
@@ -21,4 +21,4 @@ And because it`s awesome:
 How can you use DATTT?
 ----------------------
 
-DATTT is not ready yet for using or testing. Stay tunend!
+DATTT is not ready for using or testing yet. Stay tunend!
