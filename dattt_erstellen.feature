@@ -1,5 +1,6 @@
 Feature: create new DATTT
     Users can create new DATTT only if they're logged in
+
 Scenario: The user is not logged in and tries to create a DATTT
     Given the user is not logged in
     When the user pushes the create button
