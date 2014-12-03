@@ -1,6 +1,5 @@
 package models;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import play.db.ebean.Model;
@@ -16,18 +16,26 @@ import play.data.format.*;
 import play.data.validation.*;
 
 @Entity
-public class Tag extends Model{
+public class Sharing extends Model{
 	
 	@Id
 	public String id;
 
 	@Constraints.Required
-	public String name;
+	@ManyToOne
+	public Dattt dattt;
 	
-	public String info;
+	@Constraints.Required
+	@ManyToOne
+	public Dattt user;
+	
+	public boolean readAllowed;
+	public boolean checkAllowed;
+	public boolean addAllowed;
+	public boolean modAllowed;	
 	
 	@ManyToMany(mappedBy="tags")
 	public Set<Dattt> dattts = new HashSet<Dattt>();
 	
-	public static Finder<Long,Tag> find = new Finder<Long,Tag>(Long.class, Tag.class); 
+	public static Finder<Long,Sharing> find = new Finder<Long,Sharing>(Long.class, Sharing.class); 
 }

@@ -19,11 +19,10 @@ import play.data.validation.*;
 public class Dattt extends Model{
 	
 	@Id
-	@GeneratedValue
 	public String id;
 
 	@Constraints.Required
-	@Formats.DateTime(pattern="dd/MM/yyyy")
+	@Formats.DateTime(pattern="yyyy-MM-dd")
 	public Date createAt = new Date();
 
 	@Constraints.Required
@@ -35,11 +34,14 @@ public class Dattt extends Model{
 	
 	public User owner;
 
-	@Formats.DateTime(pattern="dd/MM/yyyy")
+	@Formats.DateTime(pattern="yyyy-MM-dd")
 	public Date deatline = new Date();
 	
 	@ManyToMany(mappedBy="dattts")
 	public Set<Tag> tags = new HashSet<Tag>();
+	
+	@OneToMany
+	public Set<Sharing> sharings = new HashSet<Sharing>();
 	
 	public static Finder<Long,Dattt> find = new Finder<Long,Dattt>(Long.class, Dattt.class); 
 }

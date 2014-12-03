@@ -10,5 +10,8 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs
+  javaWs,
+  "ws.securesocial" %% "securesocial" % "master-SNAPSHOT"
+)
+resolvers += Resolver.sonatypeRepo("snapshots")
 )

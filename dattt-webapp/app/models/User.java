@@ -19,10 +19,9 @@ import play.data.validation.*;
 public class User extends Model{
 	
 	@Id
-	@GeneratedValue
 	public String id;
 
-	@Constraints.Required
+	@Constraints.Email
 	public String email;	
 	
 	@Column(unique=true)
@@ -36,16 +35,24 @@ public class User extends Model{
 	public String passwordHash;
 	
 	public boolean active;
+
+	public boolean emailValidated;
 	
 	@Constraints.Required
-	@Formats.DateTime(pattern="dd/MM/yyyy")
-	public Date registeredAt = new Date();
+	@Formats.DateTime(pattern="yyyy-MM-dd")
+	public Date registeredAt;
+	
+	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
+	public Date lastLogin;
 	
 	public String googleAccountName;
 	
 	//Ein User kann mehrere Freunde haben (einseitige Annahme)
 	@ManyToMany
 	public Set<User> friends = new HashSet<User>();
+	
+	@OneToMany
+	public Set<Sharing> sharings = new HashSet<Sharing>();
 	
 	public static Finder<Long,User> find = new Finder<Long,User>(Long.class, User.class); 
 }
