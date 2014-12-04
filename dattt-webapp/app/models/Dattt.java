@@ -37,8 +37,8 @@ public class Dattt extends Model{
 	@Formats.DateTime(pattern="yyyy-MM-dd")
 	public Date deatline = new Date();
 	
-	@ManyToMany(mappedBy="dattts")
-	public Set<Tag> tags = new HashSet<Tag>();
+//    @ManyToMany(mappedBy="dattts")
+//	public Set<Tag> tags = new HashSet<Tag>();
 	
 	@OneToMany
 	public Set<Sharing> sharings = new HashSet<Sharing>();

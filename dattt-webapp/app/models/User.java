@@ -47,9 +47,9 @@ public class User extends Model{
 	
 	public String googleAccountName;
 	
-	//Ein User kann mehrere Freunde haben (einseitige Annahme)
-	@ManyToMany
-	public Set<User> friends = new HashSet<User>();
+//	//Ein User kann mehrere Freunde haben (einseitige Annahme)
+//	@ManyToMany
+//	public Set<User> friends = new HashSet<User>();
 	
 	@OneToMany
 	public Set<Sharing> sharings = new HashSet<Sharing>();

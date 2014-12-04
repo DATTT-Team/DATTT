@@ -27,15 +27,12 @@ public class Sharing extends Model{
 	
 	@Constraints.Required
 	@ManyToOne
-	public Dattt user;
+	public User user;
 	
 	public boolean readAllowed;
 	public boolean checkAllowed;
 	public boolean addAllowed;
 	public boolean modAllowed;	
-	
-	@ManyToMany(mappedBy="tags")
-	public Set<Dattt> dattts = new HashSet<Dattt>();
 	
 	public static Finder<Long,Sharing> find = new Finder<Long,Sharing>(Long.class, Sharing.class); 
 }
