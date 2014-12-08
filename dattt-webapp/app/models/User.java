@@ -20,39 +20,33 @@ public class User extends Model{
 	
 	@Id
 	public String id;
-
 	@Constraints.Email
 	public String email;	
-	
 	@Column(unique=true)
 	@Constraints.Required
 	public String nick;
-	
 	public String firstName;
-	
 	public String lastName;
-	
 	public String passwordHash;
-	
 	public boolean active;
-
 	public boolean emailValidated;
-	
 	@Constraints.Required
 	@Formats.DateTime(pattern="yyyy-MM-dd")
 	public Date registeredAt;
-	
 	@Formats.DateTime(pattern = "yyyy-MM-dd HH:mm:ss")
 	public Date lastLogin;
-	
 	public String googleAccountName;
-	
 //	//Ein User kann mehrere Freunde haben (einseitige Annahme)
 //	@ManyToMany
 //	public Set<User> friends = new HashSet<User>();
-	
 	@OneToMany
 	public Set<Sharing> sharings = new HashSet<Sharing>();
+	
+	public User(String email, String nick, String passwordHash) {
+		this.email = email;
+		this.nick = email;
+		this.passwordHash = email;
+	}
 	
 	public static Finder<Long,User> find = new Finder<Long,User>(Long.class, User.class); 
 }

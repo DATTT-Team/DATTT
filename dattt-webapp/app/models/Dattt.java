@@ -20,28 +20,25 @@ public class Dattt extends Model{
 	
 	@Id
 	public String id;
-
+	@Constraints.Required
+	public String title;
 	@Constraints.Required
 	@Formats.DateTime(pattern="yyyy-MM-dd")
 	public Date createAt = new Date();
-
-	@Constraints.Required
-	public String name;
-	
 	public String body;
-	
 	public String location;
-	
 	public User owner;
-
 	@Formats.DateTime(pattern="yyyy-MM-dd")
-	public Date deatline = new Date();
-	
+	public Date deadline = new Date();
 //    @ManyToMany(mappedBy="dattts")
 //	public Set<Tag> tags = new HashSet<Tag>();
-	
 	@OneToMany
 	public Set<Sharing> sharings = new HashSet<Sharing>();
+	
+	public Dattt(String title, Date createAt) {
+		this.title = title;
+		this.createAt = createAt;
+	}
 	
 	public static Finder<Long,Dattt> find = new Finder<Long,Dattt>(Long.class, Dattt.class); 
 }

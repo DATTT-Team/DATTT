@@ -1,0 +1,22 @@
+@(form: Form[Dattt])
+
+@main("Neuen DATTT erstellen")("Neuen DATTT erstellen")("neuerdattt") {
+
+  @helper.form(routes.DatttContr.create) {
+	
+	  <p>
+	    <input type="text" name="title" placeholder="Titel" @*value="@form("title").value"*@>
+	  </p>
+	  <p>
+	    <textarea name="body" rows="10" cols="30">Beispieltext
+	    </textarea>
+	  </p>
+	  <p>
+	    <input type="date" name="deadline" placeholder="deadline" >
+	  </p>
+	  <p>
+	    <button type="submit">Dattt erstellen</button>
+	  </p>
+}
+
+}

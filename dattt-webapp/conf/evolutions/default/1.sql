@@ -5,11 +5,11 @@
 
 create table dattt (
   id                        varchar(255) not null,
+  title                     varchar(255),
   create_at                 timestamp,
-  name                      varchar(255),
   body                      varchar(255),
   location                  varchar(255),
-  deatline                  timestamp,
+  deadline                  timestamp,
   constraint pk_dattt primary key (id))
 ;
 

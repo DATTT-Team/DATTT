@@ -1,7 +1,25 @@
-@(message: String)
 
-@main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+@main("Welcome to DATTT")("")("home") {
+
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>
+          Willkommen zu DATTT
+        </h1>
+        <p>
+          <p>
+            DATTT is a small to-do lists and notice manager which provides you to share your task and work together.
+          </p>
+        </p>
+      </div>	
+      <div class="col-md-6">
+        <img src="@routes.Assets.at("images/ic_dattt_col_256.png")"
+        class="pull-right">
+      </div>
+    </div>
+  </div>
+
 
 }
