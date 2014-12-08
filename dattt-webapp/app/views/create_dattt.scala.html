@@ -5,17 +5,16 @@
   @helper.form(routes.DatttContr.create) {
 	
 	  <p>
-	    <input type="text" name="title" placeholder="Titel" @*value="@form("title").value"*@>
-	  </p>
-	  <p>
-	    <textarea name="body" rows="10" cols="30">Beispieltext
+	    <input class="form-control" type="text" name="title" placeholder="Titel" @*value="@form("title").value"*@>
+	  	<br>
+	    <textarea class="form-control" name="body" rows="10" cols="30">Beispieltext
 	    </textarea>
 	  </p>
-	  <p>
-	    <input type="date" name="deadline" placeholder="deadline" >
+	  <p>deadline:<br>
+	    <input class="form-control"type="date" name="deadline" placeholder="deadline" >
 	  </p>
 	  <p>
-	    <button type="submit">Dattt erstellen</button>
+	    <button class="btn btn-default" type="submit">Dattt erstellen</button>
 	  </p>
 }
 

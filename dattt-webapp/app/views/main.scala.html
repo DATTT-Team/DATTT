@@ -25,13 +25,13 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
           <li @if(active == "home"){ class="active" }>
-            <a href="#">Home</a>
+            <a href="@routes.Application.index()">Home</a>
           </li>
           <li @if(active == "dashboard"){ class="active" }> 
             <a href="#">Dashboard</a>
           </li>
           <li @if(active == "neuerdattt"){ class="active" }>
-            <a href="#">Neuer Dattt</a>
+            <a href="@routes.DatttContr.create()">Neuer Dattt</a>
           </li>
           <li @if(active == "freunde"){ class="active" }>
             <a href="#">Freunde</a>

@@ -14,16 +14,17 @@ import javax.persistence.OneToMany;
 import play.db.ebean.Model;
 import play.data.format.*;
 import play.data.validation.*;
+import play.data.validation.Constraints.Required;
 
 @Entity
 public class Dattt extends Model{
 	
 	@Id
-	public String id;
-	@Constraints.Required
+	public long id;
+	@Required
 	public String title;
-	@Constraints.Required
-	@Formats.DateTime(pattern="yyyy-MM-dd")
+//	@Required
+//	@Formats.DateTime(pattern="yyyy-MM-dd")
 	public Date createAt = new Date();
 	public String body;
 	public String location;

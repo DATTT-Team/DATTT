@@ -22,11 +22,23 @@ public class DatttContr extends Controller {
     }
     
     public static Result create_form() {
-        return ok(create_dattt.render(form(Dattt.class)));
+        return ok(create_dattt.render(datttForm));
     }
     
     public static Result create() {
-        return ok("TODO");
+    	Form<Dattt> filledForm = datttForm.bindFromRequest();
+    	
+    	if(filledForm.hasErrors()) {
+    		return badRequest("notOK");
+//            return badRequest(create_dattt.render(filledForm));
+        } else {
+            Dattt created = filledForm.get();
+            created.createAt = new Date();
+            created.save();
+            return redirect(controllers.routes.Application.index());
+            //später mal nach DatttContr.list()
+        }
+    	
     }
     
     public static Result change() {

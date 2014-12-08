@@ -4,7 +4,7 @@
 # --- !Ups
 
 create table dattt (
-  id                        varchar(255) not null,
+  id                        bigint not null,
   title                     varchar(255),
   create_at                 timestamp,
   body                      varchar(255),
@@ -15,7 +15,7 @@ create table dattt (
 
 create table sharing (
   id                        varchar(255) not null,
-  dattt_id                  varchar(255),
+  dattt_id                  bigint,
   user_id                   varchar(255),
   read_allowed              boolean,
   check_allowed             boolean,
