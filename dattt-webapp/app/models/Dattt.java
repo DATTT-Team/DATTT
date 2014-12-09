@@ -20,7 +20,7 @@ import play.data.validation.Constraints.Required;
 public class Dattt extends Model{
 	
 	@Id
-	public long id;
+	public Long id;
 	@Required
 	public String title;
 //	@Required

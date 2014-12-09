@@ -1,6 +1,7 @@
 package controllers;
 
 import java.util.Date;
+import java.util.List;
 
 import play.*;
 import static play.data.Form.*;
@@ -13,8 +14,9 @@ public class DatttContr extends Controller {
 	
 	final static Form<Dattt> datttForm = form(Dattt.class);
 
-    public static Result list() {
-        return ok("TODO");
+    public static Result dashboard() {
+    	List<Dattt> dattts = Dattt.find.all();
+        return ok(dashboard.render(dattts));
     }
     
     public static Result details() {
