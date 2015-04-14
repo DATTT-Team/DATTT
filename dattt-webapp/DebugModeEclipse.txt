@@ -1,0 +1,7 @@
+To work with Eclipse, run the application in the console (Play-Version: 2.3.x) with: "activator -jvm-debug 9999 run"
+Then in Eclipse, rightclick on the project and choose "Debug as", "Debug Configuration".
+Rightclick on "Remote Java Application" and choose 'new'. Choose "Standard (Socket-Attach)", "localhost" and as Port: 9999.
+Then Start Debug in Eclipse. 
+
+(Now you can set Breakpoints in Eclipse and klick through the started Webapp. 
+If you hit a place where a Breakpoint in Eclipse is set, Eclipse will jump into and you can Debug as Remote from Eclipse)
